@@ -183,14 +183,15 @@ textarea {
     -o-object-position: center;
        object-position: center;
     border-radius: 8px; }
-  .photos__wide_left .photos__img:first-child {
-    width: calc(67% - 10px); }
-  .photos__wide_left .photos__img:last-child {
-    width: calc(33% - 10px); }
-  .photos__wide_right .photos__img:first-child {
-    width: calc(33% - 10px); }
-  .photos__wide_right .photos__img:last-child {
-    width: calc(67% - 10px); }
+  @media screen and (min-width: 740px) {
+    .photos__wide_left .photos__img:first-child {
+      width: calc(67% - 10px); }
+    .photos__wide_left .photos__img:last-child {
+      width: calc(33% - 10px); }
+    .photos__wide_right .photos__img:first-child {
+      width: calc(33% - 10px); }
+    .photos__wide_right .photos__img:last-child {
+      width: calc(67% - 10px); } }
 
 .gallery_heading {
   width: 143px;
@@ -206,6 +207,12 @@ textarea {
           box-sizing: border-box;
   border-radius: 8px;
   margin: 40px auto 0; }
+  .gallery__button:hover {
+    background: #0067df;
+    -webkit-box-shadow: 0 13px 27px rgba(0, 83, 181, 0.46);
+            box-shadow: 0 13px 27px rgba(0, 83, 181, 0.46);
+    border-radius: 8px;
+    color: white; }
 
 .button {
   display: block;
@@ -256,7 +263,8 @@ textarea {
     -webkit-box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
             box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
     border-radius: 8px;
-    color: white; }
+    color: white;
+    border: none; }
     .form__button:hover {
       background: #0067df;
       -webkit-box-shadow: 0 13px 27px rgba(0, 83, 181, 0.46);
@@ -281,7 +289,8 @@ textarea {
     color: inherit; }
   .input__textarea {
     padding-top: 17px;
-    height: 144px; }
+    height: 144px;
+    resize: none; }
 
 .testimonials {
   display: grid;
@@ -336,6 +345,39 @@ textarea {
     right: 0;
     margin: auto;
     bottom: 40px; }
+
+@media screen and (min-width: 320px) and (max-width: 740px) {
+  .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 20px; }
+  .gallery {
+    margin: 0 20px; }
+  .consultation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 20px; }
+  .testimonials,
+  .contact {
+    display: block;
+    margin: 0 20px; } }
 
 body {
   background: #eee; }
