@@ -42,7 +42,7 @@ textarea {
     margin: 0 38px;
     list-style: none;
     border-radius: 8px; }
-    @media screen and (min-width: 740px) and (max-width: 1160px) {
+    @media screen and (min-width: 960px) and (max-width: 1160px) {
       .nav__item {
         margin: auto; } }
     .nav__item-active {
@@ -86,17 +86,16 @@ textarea {
     white-space: nowrap;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
-    @media screen and (min-width: 740px) and (max-width: 860px) {
-      .header__phone {
-        margin: 56px auto 0 120px; } }
     .header__phone:hover {
-      color: #9fadc2; }
+      color: #70757c; }
   .header__phone-img {
     display: none; }
   .header__logo {
     margin-top: 24px;
     justify-self: center; }
   .header__action {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 56px 120px; }
   .header__link {
     color: white;
@@ -107,8 +106,8 @@ textarea {
     transition: color 0.2s;
     text-transform: uppercase;
     white-space: nowrap; }
-  .header:hover {
-    color: #9fadc2; }
+    .header__link:hover {
+      color: #70757c; }
   .header__heading {
     height: 121px;
     width: 340px;
@@ -199,6 +198,7 @@ textarea {
   .photos__img {
     width: calc(50% - 10px);
     height: 256px;
+    min-height: 131px;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
@@ -232,9 +232,10 @@ textarea {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .gallery__button:hover {
-    background: #0067df;
-    -webkit-box-shadow: 0 13px 27px rgba(0, 83, 181, 0.46);
-            box-shadow: 0 13px 27px rgba(0, 83, 181, 0.46);
+    background: #0075ff;
+    opacity: 0.7;
+    -webkit-box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
+            box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
     border-radius: 8px;
     color: white; }
 
@@ -383,7 +384,7 @@ textarea {
     margin: auto;
     bottom: 40px; }
 
-@media screen and (min-width: 320px) and (max-width: 740px) {
+@media screen and (min-width: 300px) and (max-width: 960px) {
   .header {
     height: 560px;
     position: relative; }
@@ -436,7 +437,7 @@ textarea {
       position: absolute;
       top: 350px;
       left: 20px;
-      font-size: 60px;
+      font-size: 50px;
       line-height: 60px;
       font-style: normal;
       color: white;
@@ -473,19 +474,13 @@ textarea {
   .gallery {
     margin: 0 20px; }
   .consultation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0 20px; }
+    display: block;
+    margin: 0 20px;
+    white-space: normal; }
+    .consultation__text {
+      width: auto; }
+  .form {
+    width: auto; }
   .testimonials,
   .contact {
     display: block;
@@ -550,6 +545,8 @@ textarea {
       -webkit-transition: color 0.3s;
       transition: color 0.3s;
       letter-spacing: 2px; }
+      .mobile-nav__action-link:hover {
+        color: #9fadc2; }
       .mobile-nav__action-link::after {
         content: "";
         display: block;
